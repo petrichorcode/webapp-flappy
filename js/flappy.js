@@ -13,6 +13,7 @@ var game = new Phaser.Game(790, 400, Phaser.AUTO, 'game', stateActions);
  * Loads all resources for the game and gives them names.
  */
 function preload() {
+    game.load.image("backgroundImg", "../assets/flappydoge.jpg");
 
 
 }
@@ -20,7 +21,9 @@ function preload() {
 /*
  * Initialises the game. This function is only called once.
  */
-function create() {
+function create() {game.stage.setBackgroundColor("#9999FF");
+    game.add.text(20,20, "RAGE SIMULATOR", {font: "30px Comic Sans MS", fill: "#FFFFD9"});
+
     // set the background colour of the scene
 }
 
@@ -29,4 +32,7 @@ function create() {
  */
 function update() {
 
+}
+function clickHandler(event) {
+    alert("click")
 }

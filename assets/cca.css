@@ -1,23 +1,26 @@
 body {
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
     margin: 0;
-    /*width: 100%;*/
-    background: url('flappy-bg.png') repeat;
+    width: 100%;
+    background: url('dogeflappy.jpg') no-repeat;
 }
+/*
 #header {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background: url('flappy-header.png') top center no-repeat;
+    background: url('flappydoge.jpg') top center no-repeat;
     background-size: 100%;
 }
+*/
+/*
 #cca {
-    padding-top: 5%;
-    padding-left: 60%;
+    padding-top: 0%;
+    padding-left: 0%;
     padding-bottom: 20px;
 }
 #header p{
@@ -33,18 +36,20 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 46px;
 }
+*/
 #flappy {
     position: absolute;
     padding-left: 5%;
     padding-top: 2%;
 }
+/*
 #footer {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background: url('flappy-footer.png') top center no-repeat;
-    background-size: 100%;
+    background: url('flappydoge.jpg') top center no-repeat;
+    background-size: 0%;
 }
 #footer p{
     color: white;
@@ -55,6 +60,7 @@ body {
     padding-left: 15%;
     margin: 0;
 }
+*/
 #game {
     margin: 20px;
     margin-left: auto;
