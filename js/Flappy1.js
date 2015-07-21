@@ -4,7 +4,7 @@
 // the functions associated with preload, create and update.
 var actions = { preload: preload, create: create, update: update };
 // the Game object used by the phaser.io library
-var game = new Phaser.Game(790, 400, Phaser.AUTO, "game", actions);
+var game = new Phaser.Game(790, 400, Phaser.AUTO, "gameBox", actions);
 // Global score variable initialised to 0.
 var score = 0;
 // Global variable to hold the text displaying the score.
@@ -23,7 +23,7 @@ $("#greeting-form").on("submit", function(event_details) {
     var greeting_message = greeting + " " + name + "?";
     jQuery("#greeting-form").hide();
     jQuery("#greeting").append("<p>" + greeting_message + "</p>");
-    event_details.preventDefault();
+    //event_details.preventDefault();
 });
 // Loads all resources for the game and gives them names.
 function preload() {
@@ -125,8 +125,24 @@ function gameOver() {
     // stop the game (update() function no longer called)
     game.destroy();
     $("#greeting").show();
+    $("#score").val(score.toString());
+
 }
 
 $.get("/score", function(scores){
     console.log("Data: ",scores);
+    /* sort method orders the array. However since the array is an object, we use the difference command
+    * to define the sort by score*/
+    scores.sort(function (scoreA, scoreB){
+        var difference = scoreB.score - scoreA.score;
+        return difference;
+    });
+    /* takes in array object ordered by score and appends to leaderboard on webpage*/
+    for (var i = 0; i < 3; i++) {
+        $("#scoreBoard").append(
+            "<li class='score"+ i + "'>" +
+            scores[i].name + ": " + scores[i].score +
+            "</li>");
+    }
+
 });

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!----Calls CSS and Bootstrap module-->
+    <title>Bob's Flappy Bird</title>
+    <link rel="stylesheet" href="../lib/bootstrap.css"/>
+    <link rel="stylesheet" href="../assets/style.css"/>
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/phaser.min.js"></script>
+    <script src="../js/Flappy1.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Rage Sim 2k15</h1>
+        <p>Such birds. Much fun. Very addict </p>
+    </div>
+
+    <div id="greeting">
+        <!--Form-->
+        <form id="greeting-form" method="post" class="form-inline" action="/score">
+            <div class="form-group">
+                <!--Name--->
+                <label for="fullName">What's your name?</label>
+                <input type="text" id="fullName" class="form-control"
+                       name="fullName" placeholder="Bob">
+                <!--Email--->
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" class="form-control"
+                       name="email" placeholder="bob@email.com">
+                <!--Hidden form element to store game score--->
+                <input type="hidden" id="score" name="score" value="0">
+
+                <button class="btn btn-default" type="submit">OK</button>
+
+                <p></p>
+                <p>The highest scorers are... </p>
+                <ol id="scoreBoard">
+                </ol>
+            </div>
+        </form>
+
+        <!--<div class="col-md-8">-->
+        <!--<div id="game">-->
+        <!--</div>-->
+        <!--</div>-->
+        <div id="gameBox">
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+<!--<div class=""container">-->
+    <!--<div class ="row">-->
+     <!--<div class="col-md-8">-->
+         <!--<p id="gameLink">-->
+             <!--<a href="example.html">-->
+                 <!--<img src="../assets/screenshot.png" class="img-responsive" />-->
+             <!--</a>-->
+         <!--</p>-->
+     <!--</div>-->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
